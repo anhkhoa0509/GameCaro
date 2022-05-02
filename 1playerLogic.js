@@ -48,7 +48,7 @@ function move(element, player, color) {
 
     if (winning(board, player)) {
       setTimeout(function () {
-        $("#nofi").html("Người chơi dùng quân trắng chiến thắng!");
+        $("#nofi").html("Chúc mừng bạn đã chiến thắng!");
         $("#button").css("display", "block");
         $("#nofi").css("display", "block");
         audio.play();
@@ -72,7 +72,7 @@ function move(element, player, color) {
       board[index] = aiPlayer;
       if (winning(board, aiPlayer)) {
         setTimeout(function () {
-          $("#nofi").html("Người chơi dùng quân đen chiến thắng!");
+          $("#nofi").html("Thất bại!");
           $("#button").css("display", "block");
           $("#nofi").css("display", "block");
           win = false;
