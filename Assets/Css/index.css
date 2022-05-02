@@ -1,5 +1,4 @@
   .main {
-      width: calc(80% - 400px);
       height: 100vh;
       margin: 0 auto;
       background-image: url("https://static.vecteezy.com/system/resources/previews/003/169/779/non_2x/wood-texture-background-free-vector.jpg");
@@ -8,6 +7,13 @@
       display: flex;
       flex-direction: column;
       overflow: hidden;
+  }
+
+  .start {
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+      color: white;
   }
 
   .container .far {
@@ -221,28 +227,6 @@
       grid-template-columns: repeat(3, auto)
   }
 
-  #bodyRender {
-      flex: 1
-  }
-
-  .bodyRender {
-      height: 100%;
-      justify-content: space-between;
-      flex-direction: column;
-      display: flex;
-  }
-
-  .board-3 {
-      grid-template-columns: repeat(3, auto)
-  }
-
-  .board-5 {
-      grid-template-columns: repeat(5, auto)
-  }
-
-  .board-7 {
-      grid-template-columns: repeat(7, auto)
-  }
 
   .cell {
       width: var(--cell-size);
@@ -337,6 +321,7 @@
   .board-7.circle .cell:not(.x):not(.circle):hover::before {
       background-color: lightgrey;
   }
+
   .cell.x::before,
   .cell.x::after,
   .board.x .cell:not(.x):not(.circle):hover::before,
@@ -407,6 +392,7 @@
       background-image: url("https://static.vecteezy.com/system/resources/previews/003/169/779/non_2x/wood-texture-background-free-vector.jpg");
       background-size: cover;
   }
+
   .board-7.cell.circle::after,
   .board-7.circle .cell:not(.x):not(.circle):hover::after {
       width: calc(var(--mark-size-7) * .7);
